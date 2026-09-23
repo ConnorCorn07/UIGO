@@ -23,7 +23,7 @@ public class slots {
     public static boolean slotsGame(Scanner sysin, int bet) {
         Misc.execBet(bet);
         System.out.println();
-        System.out.println(colors.TEXT_BRIGHT_WHITE + "Balance : " + colors.TEXT_BRIGHT_GREEN + Main.money + colors.TEXT_BRIGHT_WHITE + " Chips");
+        System.out.println(colors.TEXT_BRIGHT_WHITE + "Balance : " + colors.TEXT_BRIGHT_GREEN + Main.GetBalance() + colors.TEXT_BRIGHT_WHITE + " Chips");
         System.out.println(colors.TEXT_BRIGHT_WHITE + "Current bet : " + colors.TEXT_BRIGHT_GREEN + bet + colors.TEXT_BRIGHT_WHITE + " Chips");
 
         Random random = new Random();
@@ -48,8 +48,10 @@ public class slots {
         }
         System.out.println(colors.TEXT_BRIGHT_WHITE);
         if (roll[0] == roll[1] && roll[1] == roll[2]) {
-           System.out.println("win");
-           Main.money += bet*2;
+           System.out.println();
+           System.out.println(colors.TEXT_BRIGHT_GREEN + "+" + bet*9 + colors.TEXT_BRIGHT_WHITE + " Chips" );
+           Main.AddBalance(bet*9);
+           System.out.println("New Balance : " + colors.TEXT_BRIGHT_GREEN + Main.GetBalance() + colors.TEXT_BRIGHT_WHITE + " Chips");
         }
 
         System.out.println("Press Enter to spin again");

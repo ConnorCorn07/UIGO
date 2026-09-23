@@ -46,6 +46,6 @@ public class Main {
     public static void AddBalance(int add) {
         if (!checksum.balance()) {
             throw new RuntimeException("Player balance is invalid (" + money + ")");
-        } else money = money + add;
+        } else money += add;
     }
 }
