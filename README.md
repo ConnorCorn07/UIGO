@@ -28,6 +28,12 @@ A terminal-based casino game written in Java. You start with **100 chips** and p
 - Landing on the side has about a 1 in 6000 chance and pays **500x**.
 - Press Enter after a flip to flip again with the same bet.
 
+### Slots
+- Place your bet.
+- Press `enter` to roll.
+- Getting 3 of the same color pays out **8x**.
+- Press Enter roll again with the same bet.
+
 ## Requirements
 
 - **Java 17 or newer.** The code uses `Random.nextInt(origin, bound)` and switch expressions.
@@ -62,7 +68,6 @@ assets/Large/      Playing card images (all suits, card backs, jokers)
 ## Roadmap
 
 - Finish Slots and Russian Roulette
-- Build a JavaFX graphical UI for Blackjack using the card images in `assets/`
 
 ## License
 
