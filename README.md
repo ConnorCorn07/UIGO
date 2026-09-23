@@ -11,7 +11,7 @@ A terminal-based casino game written in Java. You start with **100 chips** and p
 |------|---------|--------|
 | Blackjack | `bj` | Playable |
 | Coin Flip | `cf` | Playable |
-| Slots | `s` | Work in progress (betting only) |
+| Slots | `s` | Playable YAY! |
 | Russian Roulette | `r` | Work in progress (intro only) |
 
 ### Blackjack
