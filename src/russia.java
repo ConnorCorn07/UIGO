@@ -10,7 +10,7 @@ public class russia {
         String Choice1 = sysin.nextLine();
         if (Choice1.contains("y")){
             bet();
-        } else Main.gamemode();
+        } else Main.gamemode(sysin);
     }
     public static void bet() throws InterruptedException {
         Scanner sysin = new Scanner(System.in);

@@ -21,7 +21,7 @@ public class blackjack {
         String choice = sysin.nextLine();
         if (choice.equals("y")) {
             bet();
-        } else Main.gamemode();
+        } else Main.gamemode(sysin);
     }
 
 
@@ -52,7 +52,7 @@ public class blackjack {
             if (checksum.bet(bet)) {
 
                 backjack(bet, decks);
-            } else Main.gamemode();
+            } else Main.gamemode(sysin);
         }
         else {
             initial();
