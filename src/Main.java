@@ -33,7 +33,7 @@ public class Main {
             coinflip.initial();
         }
         if (choice.contains("r")) {
-            russia.initial();
+            russia.initial(sysin);
         }
     }
 

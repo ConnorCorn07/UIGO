@@ -4,7 +4,7 @@ public class checksum {
     }
 
     public static boolean balance() {
-        return Main.money > 0;
+        return Main.money >= 0;
     }
 
 

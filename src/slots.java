@@ -21,6 +21,7 @@ public class slots {
     }
 
     public static boolean slotsGame(Scanner sysin, int bet) {
+        if (bet > Main.GetBalance()) { return false; }
         Misc.execBet(bet);
         System.out.println();
         System.out.println(colors.TEXT_BRIGHT_WHITE + "Balance : " + colors.TEXT_BRIGHT_GREEN + Main.GetBalance() + colors.TEXT_BRIGHT_WHITE + " Chips");
