@@ -14,6 +14,8 @@ A terminal-based casino game written in Java. You start with **100 chips** and p
 | Slots | `s` | Playable YAY! |
 | Russian Roulette | `r` | Work in progress (intro only) |
 
+Type the command at the menu (`s`, `bj`, `cf`, or `r`). Anything else shows an error and re-shows the menu.
+
 ### Blackjack
 - Played against a dealer with a shuffled deck.
 - Type `hit` to draw a card. Type anything else to stand.
@@ -33,6 +35,11 @@ A terminal-based casino game written in Java. You start with **100 chips** and p
 - Press `enter` to roll.
 - Getting 3 of the same color pays out **8x**.
 - Press Enter roll again with the same bet.
+- If your balance can no longer cover that bet, it'll tell you and end the session instead of quitting silently.
+
+### Russian Roulette
+- Still work in progress: currently only plays the intro and takes your bet.
+- Your max bet is capped at 1/10th of your balance (minimum 1 chip).
 
 ## Requirements
 
@@ -55,12 +62,13 @@ java -cp out Main
 ```
 src/
   Main.java        Entry point, game menu, and player balance
-  blackjack.java   Blackjack game
-  coinflip.java    Coin Flip game
-  slots.java       Slots (WIP)
-  russia.java      Russian Roulette (WIP)
-  checksum.java    Bet and balance validation
-  colors.java      ANSI color constants for terminal output
+  Blackjack.java   Blackjack game
+  Coinflip.java    Coin Flip game
+  Slots.java       Slots (WIP)
+  Russia.java      Russian Roulette (WIP)
+  Checksum.java    Bet and balance validation
+  Misc.java        Shared bet-prompt and bet-execution helpers
+  Colors.java      ANSI color constants for terminal output
   test.fxml        Early JavaFX layout for a future graphical blackjack UI
 assets/Large/      Playing card images (all suits, card backs, jokers)
 ```
