@@ -3,6 +3,9 @@ import java.util.Scanner;
 
 public class Slots {
 
+    protected static final int winPayout = 8;
+    protected static final int losePayout = 1;
+
     public static void initial(Scanner sysin) throws InterruptedException {
 
 
@@ -21,11 +24,11 @@ public class Slots {
     }
 
     private static boolean slotsGame(Scanner sysin, int bet) {
-        if (bet > Main.GetBalance()) {
+        if (bet*losePayout > Main.GetBalance()) {
             System.out.println(Colors.TEXT_RED + "You don't have enough chips left to cover that bet.");
             return false;
         }
-        Misc.execBet(bet);
+        Misc.execBet(bet*losePayout);
         System.out.println();
         System.out.println(Colors.TEXT_BRIGHT_WHITE + "Balance : " + Colors.TEXT_BRIGHT_GREEN + Main.GetBalance() + Colors.TEXT_BRIGHT_WHITE + " Chips");
         System.out.println(Colors.TEXT_BRIGHT_WHITE + "Current bet : " + Colors.TEXT_BRIGHT_GREEN + bet + Colors.TEXT_BRIGHT_WHITE + " Chips");
@@ -54,7 +57,7 @@ public class Slots {
         if (roll[0] == roll[1] && roll[1] == roll[2]) {
            System.out.println();
            System.out.println(Colors.TEXT_BRIGHT_GREEN + "+" + bet*9 + Colors.TEXT_BRIGHT_WHITE + " Chips" );
-           Main.AddBalance(bet*9);
+           Main.AddBalance(bet*(winPayout + 1));
            System.out.println("New Balance : " + Colors.TEXT_BRIGHT_GREEN + Main.GetBalance() + Colors.TEXT_BRIGHT_WHITE + " Chips");
         }
 
