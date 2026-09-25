@@ -22,8 +22,9 @@ public class Russia {
             int max = Main.GetBalance() / 10;
             if (max > 0) {
                 russiaGame(sysin, Misc.getBet(sysin, max));
+            } else {
+                System.out.println(Colors.TEXT_RED + "You don't have enough chips to play this game");
             }
-            System.out.println(Colors.TEXT_RED + "You don't have enough chips to play this game");
             Main.gamemode(sysin);
         } else Main.gamemode(sysin);
     }
