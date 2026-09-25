@@ -20,7 +20,7 @@ public class Slots {
         Main.gamemode(sysin);
     }
 
-    public static boolean slotsGame(Scanner sysin, int bet) {
+    private static boolean slotsGame(Scanner sysin, int bet) {
         if (bet > Main.GetBalance()) {
             System.out.println(Colors.TEXT_RED + "You don't have enough chips left to cover that bet.");
             return false;

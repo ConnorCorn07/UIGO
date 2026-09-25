@@ -1,3 +1,4 @@
+@SuppressWarnings({"unused"})
 public class Colors {
 
     public static final String TEXT_RESET  = "\u001B[0m";

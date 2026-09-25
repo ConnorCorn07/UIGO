@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Main {
     public static int money = 100;
 
-    public static void main(String[] args) throws InterruptedException {
+    @SuppressWarnings({"unused"})
+    static void main(String[] args) throws InterruptedException {
         Scanner sysin = new Scanner(System.in);
 
         System.out.println(Colors.TEXT_BRIGHT_WHITE + "Choose your gamemode:");
